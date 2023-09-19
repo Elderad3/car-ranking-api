@@ -110,6 +110,22 @@ class RankingController {
   }
 
   /**
+* busca registros por Tipo
+*/
+  async emplacadosPorTipo(req, res) {
+    try {
+      const ranking = await Ranking.findAll({
+        where: {
+          tipo: req.params.tipo
+        }
+      });
+      return res.status(200).json(ranking);
+    } catch (error) {
+      res.status(500).json({ message: error.message })
+    }
+  }
+
+  /**
  * busca os 10 menos emplacados automoveis
  */
   async dezMenosEmplacadosAutomoveis(req, res) {
@@ -189,6 +205,13 @@ class RankingController {
     }
   }
 
+
+
+
+
+
 }
+
+
 
 module.exports = new RankingController();

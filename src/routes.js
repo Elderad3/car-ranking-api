@@ -15,6 +15,7 @@ router.get('/dezMenosEmplacadosAutomoveis', RankingController.dezMenosEmplacados
 router.get('/dezMaisEmplacadosComerciaisLeves', RankingController.dezMaisEmplacadosComerciaisLeves);
 router.get('/dezMenosEmplacadosComerciaisLeves', RankingController.dezMenosEmplacadosComerciaisLeves);
 router.get('/emplacadosPorAno', RankingController.emplacadosPorAno);
+router.get('/tipo/:tipo', RankingController.emplacadosPorTipo);
 
 
 router.get('/', (req, res) => {
