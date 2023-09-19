@@ -3,12 +3,13 @@ const Sequelize = require('sequelize');
 const Ranking = require('../models/Ranking');
 const RankingModelo = require('../models/RankingModelo');
 const RankingAno = require('../models/RankingAno');
-
+const RankingTipo = require('../models/RankingTipo');
 const databaseConfig = require('../../config/database');
 
 
 
-const models = [Ranking, RankingModelo, RankingAno];
+
+const models = [Ranking, RankingModelo, RankingAno, RankingTipo];
 
 class Database {
   constructor() {
