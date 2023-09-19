@@ -116,8 +116,8 @@ class RankingController {
   async emplacadosPorTipo(req, res) {
     try {
       const ranking = await RankingTipo.findAll({
+        attributes: { exclude: ['id'] },
         where: {
-          attributes: { exclude: ['id'] },
           tipo: req.params.tipo
         }
       });
