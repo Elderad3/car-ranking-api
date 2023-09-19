@@ -1,6 +1,7 @@
 const Ranking = require('../models/Ranking');
 const RankingAno = require('../models/RankingAno');
 const RankingModelo = require('../models/RankingModelo');
+const RankingTipo = require('../models/RankingTipo');
 
 class RankingController {
 
@@ -114,8 +115,9 @@ class RankingController {
 */
   async emplacadosPorTipo(req, res) {
     try {
-      const ranking = await Ranking.findAll({
+      const ranking = await RankingTipo.findAll({
         where: {
+          attributes: { exclude: ['id'] },
           tipo: req.params.tipo
         }
       });
