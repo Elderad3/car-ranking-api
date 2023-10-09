@@ -6,6 +6,7 @@ class RankingTipo extends Sequelize.Model {
       {
         marca: Sequelize.STRING,
         modelo: Sequelize.STRING,
+        subseguimento: Sequelize.INTEGER,
         tipo: Sequelize.STRING,
         total: Sequelize.INTEGER
       },
